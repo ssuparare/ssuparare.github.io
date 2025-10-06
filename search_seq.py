@@ -6,13 +6,10 @@ from pathlib import Path
 path = Path('dir')
 
 #####   เลข นศ.
-search_string = 'student id'
+search_string = 'id'
 
 for file in path.rglob('*.bin'):
     if file.is_file():
         text = file.read_text()
         if search_string in text:
-            print("found in student id in: ")
-            print(file)
-
-print("done(seq)")
+            print("found student id")
