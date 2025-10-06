@@ -5,20 +5,17 @@ import multiprocessing
 path = Path('dir')
 
 #เลข นร.
-target = 'student id'
+target = 'id'
 
 def searching(search_string):
     for file in path.rglob('*.bin'):
         if file.is_file():
             text = file.read_text()
-        if search_string in text:
-            print("found in student id in: ")
-            print(file)
+            if search_string in text:
+                print("found student id")
 
 if __name__ == "__main__":
     proccess1 = multiprocessing.Process(target=searching, args=(target, ))
 
     proccess1.start()
     proccess1.join()
-
-    print("done(mult)")
