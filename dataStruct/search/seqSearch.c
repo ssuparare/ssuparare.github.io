@@ -1,3 +1,5 @@
+//แบบไม่ใช้ pointer
+
 //ค้นหาไล่ตรวจสอบทีละตัว ว่าตรงกับค่าที่ต้องหาหรือไม่
 
 #include <stdio.h>
@@ -27,4 +29,5 @@ void main() {
         Size = sizeof(Data) / sizeof(Data[0]);
 
     SeqSearch(Data, Size, 5);
+
 }
